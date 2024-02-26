@@ -2,8 +2,10 @@
 <html>
 
 <head>
-  <meta charset="utf-8" /> // character encoding
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" /> // viewport settings
+  <!-- character encoding -->
+  <meta charset="utf-8" />
+  <!-- viewport settings -->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
   <title>Data Collector for AGOL</title>
 
@@ -17,12 +19,14 @@
      width: 100%;
     }
    </style>
+  <!-- import the css file -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" />
+  <!-- import the esri.js library -->
+  <script src="https://js.arcgis.com/4.28/"></script>
 
-  <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css" /> // import the css file
-  <script src="https://js.arcgis.com/4.26/"></script> // import the esri.js library
-
+  <!-- import the esri modules from the API -->
   <script>
-    require(["esri/Map", "esri/views/MapView", "esri/Config"], (Map, MapView, esriConfig) => {
+    require(["esri/config", "esri/Map", "esri/views/MapView"], (esriConfig, Map, MapView) => {
 
       esriConfig.apiKey = "AAPK0bcf3be97f2f477b847094cc3f93a15bFUqgC48X1eCFBejkZZxhltF6wYGP8yCnJLEWyFcqBmpG88NVXD_PgTB-NFvT_xUG";
 
@@ -35,7 +39,7 @@
         map: map // References the map object
       });
     });
-  </script> // import the esri modules from the API
+  </script>
 
 </head>
 
