@@ -26,7 +26,7 @@
 
   <!-- import the esri modules from the API -->
   <script>
-    require(["esri/config", "esri/Map", "esri/views/MapView"], (esriConfig, Map, MapView) => {
+    require(["esri/config", "esri/Map", "esri/views/MapView", "esri/widgets/Locate"], (esriConfig, Map, MapView, Locate) => {
 
       esriConfig.apiKey = "AAPK0bcf3be97f2f477b847094cc3f93a15bFUqgC48X1eCFBejkZZxhltF6wYGP8yCnJLEWyFcqBmpG88NVXD_PgTB-NFvT_xUG";
 
@@ -40,6 +40,16 @@
         center: [-80.781784, 26.982052], // Longitude, latitude, Lake Okeechobee
         zoom: 10 // Zoom level
       });
+
+      const locateBtn = new Locate({
+          view: view
+        });
+
+        // Add the locate widget to the top left corner of the view
+        view.ui.add(locateBtn, {
+          position: "top-left"
+        });
+
     });
   </script>
 
